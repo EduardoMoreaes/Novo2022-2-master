@@ -44,43 +44,5 @@
         </tr>
         <% }) %>
     </table>
-    <p>
-        <a href="/addProf">Adicionar</a>
-    </p>
-    <form method="post">
-        <input type="text" name="pesquisar">
-        <input type="submit" value="Pesquisar">
-    </form>
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Turma</th>
-            <th>Nível</th>
-            <th>Foto</th>
-            <th>Trabalho</th>
-            <th>Editar</th>
-            <th>Excluir</th>
-        </tr>
-        <% Professores.forEach((professor)=>{ %>
-        <tr>
-            <td><%=professor.id%></td>
-            <td><%=professor.nome%></td>
-            <td><%=professor.turma%></td>
-            <td><%=professor.nivel%></td>
-            <td>
-                <img src="../public/fotosProf/<%=professor.foto%>" 
-                    width="80px" alt="foto do professor">
-            </td>
-            
-            <td>
-                <a href="./edtProf/<%=professor.id%>">Editar</a>
-            </td>
-            <td>
-                <a href="/del/<%=professor.id%>">Deletar</a>
-            </td>
-        </tr>
-        <% }) %>
-    </table>
 </body>
 </html>

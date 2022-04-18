@@ -4,18 +4,18 @@ const professorController = require("../controller/professorController");
 const multer = require("../config/multer");
 
 //listar todos os dados
-router.get("/", professorController.list);
+router.get("/professor", professorController.list);
 //listar dados com filtro
-router.post("/", professorController.listfiltro);
+router.post("/professor", professorController.listfiltro);
 //abre addprof
-router.get("/addprof", professorController.abreadd);
+router.get("/addProf", professorController.abreadd);
 //adicionar dados no banco
-router.post("/addprof", multer.single("foto"), professorController.add);
+router.post("/addProf", multer.single("foto"), professorController.add);
 //abrir editar
-router.get("/edtprof/:id", professorController.abreedt);
+router.get("/edtProf/:id", professorController.abreedt);
 //editar dados no banco
-router.post("/edtprof/:id", multer.single("foto"), professorController.edt);
+router.post("/edtProf/:id", multer.single("foto"), professorController.edt);
 //deletar dados
-router.get("/delprof/:id", professorController.del);
+router.get("/delProf/:id", professorController.del);
 
 module.exports = router;

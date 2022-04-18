@@ -7,7 +7,6 @@ class Professor extends Model {
         nome: DataTypes.STRING,
         turma: DataTypes.STRING,
         nivel: DataTypes.STRING,
-        foto: DataTypes.STRING,
         trabalho: DataTypes.STRING,
       },
       { sequelize: conexao, freezeTableName: true, tableName: "professores" }

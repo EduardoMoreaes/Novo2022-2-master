@@ -21,10 +21,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      foto: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       trabalho: {
         type: Sequelize.STRING,
         allowNull: false,
